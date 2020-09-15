@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    url: jdbc:tibero:thin:@192.168.0.211:18229:tibero
+    username: aixac
+    password: aixac
+    driver-class-name: com.tmax.tibero.jdbc.TbDriver
+
+  mvc:
+    view:
+      prefix: /jsp/
+      suffix: .jsp
+    static-path-pattern: /**
+
+server:
+  port: 8443
+  ssl:
+    enabled: true
+    key-store: "keystore.p12"
+    key-store-type: PKCS12 #"JKS" 또는 "PKCS12" 지정
+    key-store-password: password
+    key-alias: examkeystore
+
+logging:
+  level:
+    com.example.demo: DEBUG
